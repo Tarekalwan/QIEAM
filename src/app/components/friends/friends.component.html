@@ -1,0 +1,33 @@
+<div class="friends-container">
+  <img class="logo-image" src="assets/Images/qiem.png" alt="Logo">
+  <button class="back-button" routerLink="/library">
+    <i class="fas fa-arrow-left"></i>
+  </button>
+  <h2>Mes amis</h2>
+  <div class="search-container">
+    <div class="search-bar">
+      <input type="text" [(ngModel)]="searchName" placeholder="Rechercher un ami par nom">
+      <button class="search-button" (click)="searchFriends()">Rechercher</button>
+    </div>
+  </div>
+  <div class="friends-grid">
+    <div *ngFor="let friend of paginatedFriends" class="friend-card">
+      <i class="fas fa-user fa-2x"></i>
+      <p>{{ friend.name }}</p>
+      <div *ngIf="friend.isFriend" class="friend-badge">
+        <i class="fas fa-user-check"></i>
+      </div>
+      <div *ngIf="!friend.isFriend" class="non-friend-badge">
+        <i class="fas fa-user-times"></i>
+      </div>
+    </div>
+  </div>
+  <div class="pagination-buttons">
+    <button class="pagination-button" (click)="previousPage()" [disabled]="currentPage === 0">
+      <i class="fas fa-arrow-left"></i> Précédent
+    </button>
+    <button class="pagination-button" (click)="nextPage()" [disabled]="(currentPage + 1) * itemsPerPage >= filteredFriends.length">
+      Suivant <i class="fas fa-arrow-right"></i>
+    </button>
+  </div>
+</div>

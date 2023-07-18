@@ -1,0 +1,150 @@
+.page-container {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  max-width: 80%;
+  margin: auto;
+}
+
+.logo-image {
+  width: 100px;
+  height: auto;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #000;
+  margin: 10px 20px;
+  padding: 10px 0;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #007bff;
+}
+
+.nav-link-active {
+  color: #007bff;
+  border-bottom: 2px solid #007bff;
+}
+
+.library-container,
+.store-container {
+  margin-top: 20px;
+}
+
+.game-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-gap: 20px;
+  padding: 20px;
+}
+
+.game-card {
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.game-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 10px 20px rgba(0,0,0,0.1);
+}
+
+.game-header {
+  text-align: center;
+}
+
+.game-image {
+  width: 100%; /* Adjust as needed */
+}
+
+.game-name,
+.game-description {
+  margin: 10px 0;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.game-button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #0099ff;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.game-button:hover {
+  background-color: #0056b3;
+}
+
+.play-button,
+.details-button {
+  margin: 5px;
+}
+
+.buy-button {
+  background-color: #28a745;
+}
+
+.buy-button:hover {
+  background-color: #218838;
+}
+
+
+.game-icon {
+  font-size: 4rem;
+  color: hsla(2, 96%, 40%, 0.758);
+}
+
+
+.pagination-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.pagination-button {
+  padding: 10px;
+  background-color: #0099ff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.pagination-button:hover {
+  background-color: #0056b3;
+}
+
+.pagination-button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}

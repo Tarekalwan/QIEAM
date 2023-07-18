@@ -1,0 +1,51 @@
+<div class="page-container">
+    <img class="logo-image" src="assets/Images/qiem.png" alt="Logo">
+    <div class="nav-container">
+      <nav>
+        <ul class="nav-links">
+          <li><a class="nav-link" routerLink="/library">Bibliothèque</a></li>
+          <li><a class="nav-link" routerLink="/friends">Amis</a></li>
+        </ul>
+      </nav>
+  </div>
+
+
+  <div class="library-container">
+    <h2>Ma bibliothèque de jeux</h2>
+    <div class="game-grid">
+      <div *ngFor="let game of libraryGames" class="game-card">
+        <div class="game-header">
+          <i class="fas fa-gamepad game-icon"></i>
+          <h3 class="game-name">{{ game.name }}</h3>
+        </div>
+        <p class="game-description">{{ game.description }}</p>
+        <div class="button-container">
+          <button class="game-button play-button"><i class="fas fa-play"></i> Play Online</button>
+          <button class="game-button details-button"><i class="fas fa-cloud-download-alt"></i> Get media</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="store-container">
+    <h2>Jeux disponibles dans le magasin</h2>
+    <div class="game-grid">
+      <div *ngFor="let game of paginatedStoreGames" class="game-card">
+        <div class="game-header">
+          <i class="fas fa-gamepad game-icon"></i>
+          <h3 class="game-name">{{ game.name }}</h3>
+        </div>
+        <button class="game-button buy-button" (click)="addToLibrary(game)"> <i class="fas fa-shopping-cart"></i>Buy</button>
+      </div>
+    </div>
+    <div class="pagination-buttons">
+      <button class="pagination-button" (click)="previousPage()" [disabled]="currentPage === 0">
+        <i class="fas fa-arrow-left"></i> Précédent
+      </button>
+      <button class="pagination-button" (click)="nextPage()" [disabled]="(currentPage + 1) * itemsPerPage >= storeGames.length">
+        Suivant <i class="fas fa-arrow-right"></i>
+      </button>
+    </div>
+  </div>
+</div>

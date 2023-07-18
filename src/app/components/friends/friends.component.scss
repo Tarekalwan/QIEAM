@@ -1,0 +1,146 @@
+
+.friends-container {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  max-width: 80%;
+  margin: auto;
+}
+
+.logo-image {
+  width: 100px;
+  height: auto;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.search-bar {
+  display: flex;
+  flex-direction: row; /* Alignement horizontal des éléments */
+  width: 40%;
+  margin-bottom: 20px; /* Espace sous la barre de recherche */
+}
+
+.search-bar input {
+  flex-grow: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+  margin-right: 10px; /* Espace à droite du champ d'entrée pour le bouton */
+}
+
+.search-button {
+  padding: 10px;
+  background: #0099ff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+.search-button:hover {
+  background: #0056b3;
+  box-shadow: 0px 0px 10px rgba(0,56,179,0.3); /* Une ombre plus grande et plus douce au survol */
+}
+
+
+.friends-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-gap: 20px;
+  padding: 20px;
+}
+
+.friend-card {
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Pour un effet de transition au survol */
+}
+
+.friend-card:hover {
+  transform: translateY(-10px); /* Pour donner un effet de levitation au survol */
+  box-shadow: 0px 10px 20px rgba(0,0,0,0.1); /* Augmenter l'ombre pour donner une impression de profondeur */
+}
+
+.friend-badge {
+  background-color: #007bff;
+  color: white;
+  padding: 2px 5px;
+  border-radius: 5px;
+  margin-top: 10px;
+  font-size: 0.8em;
+  text-transform: uppercase;
+  display: flex; /* Ajout pour l'alignement */
+  align-items: center; /* Ajout pour l'alignement */
+}
+
+.non-friend-badge {
+  background-color: #dc3545;
+  color: white;
+  padding: 2px 5px;
+  border-radius: 5px;
+  margin-top: 10px;
+  font-size: 0.8em;
+  text-transform: uppercase;
+  display: flex; /* Ajout pour l'alignement */
+  align-items: center; /* Ajout pour l'alignement */
+}
+
+.back-button {
+  background: none;
+  border: none;
+  color: #007bff;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.back-button:hover {
+  color: #0056b3;
+}
+
+.back-button i {
+  font-size: 24px;
+}
+
+.pagination-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.pagination-button {
+  padding: 10px;
+  background-color: #0099ff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.pagination-button:hover {
+  background-color: #0056b3;
+}
+
+.pagination-button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
